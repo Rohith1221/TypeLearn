@@ -1,0 +1,16 @@
+.typing-challenge-cont {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /*NOTE */
+}
+.details-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.typewritter-cont {
+  display: flex;
+  flex-grow: 1;
+}
