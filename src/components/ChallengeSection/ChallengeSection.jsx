@@ -1,13 +1,30 @@
 import React from "react";
 import TestContainer from "../TestContainer/TestContainer";
 import "./CS.css";
-function ChallengeSection(props) {
+function ChallengeSection({
+  characters,
+  words,
+  wpm,
+  selectedParagraph,
+  timeremaining,
+  timeStarted,
+  testInfo,
+}) {
+  // console.log(props.selectedParagraph);
   return (
     <div className="ChallengeSection-container">
       <h1 data-aos="fade-down" className="ChallengeSection-header">
         Take a test now !!s
       </h1>
-      <TestContainer words={4} characters={20} wpm={20} />
+      <TestContainer
+        words={words}
+        characters={characters}
+        wpm={wpm}
+        selectedParagraph={selectedParagraph}
+        timeStarted={timeStarted}
+        timeremaining={timeremaining}
+        testInfo={testInfo}
+      />
     </div>
   );
 }

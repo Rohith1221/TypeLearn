@@ -2,7 +2,15 @@ import React from "react";
 import ChallengeDetailCard from "../ChallengeDetailsCard/ChallengeDetailCard";
 import TypingChallenge from "../TypingChallenge/TypingChallenge";
 import "./TyChallengeC.css";
-function TypingChallengeContainer({ words, characters, wpm }) {
+function TypingChallengeContainer({
+  words,
+  characters,
+  wpm,
+  selectedParagraph,
+  timeStarted,
+  timeremaining,
+  testInfo,
+}) {
   return (
     <div className="typing-challenge-cont">
       {/* details*/}
@@ -12,7 +20,12 @@ function TypingChallengeContainer({ words, characters, wpm }) {
         <ChallengeDetailCard cardName="WPM" cardValue={wpm} />
       </div>
       <div className="typewritter-cont">
-        <TypingChallenge selectedParagraph="Hello World !!!" />
+        <TypingChallenge
+          selectedParagraph={selectedParagraph}
+          timeStarted={timeStarted}
+          timeremaining={timeremaining}
+          testInfo={testInfo}
+        />
       </div>
       {/* the real challenge */}
     </div>
