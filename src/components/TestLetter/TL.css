@@ -1,0 +1,12 @@
+.test-letter {
+  font-size: 14px;
+}
+.test-letter-correct {
+  color: rgb(24, 134, 24);
+}
+.test-letter-incorrect {
+  color: rgb(201, 61, 61);
+}
+.test-letter-not-attempted {
+  color: rgb(8, 98, 121);
+}

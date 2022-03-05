@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TyC.css";
+import TestLetter from "../TestLetter/TestLetter.jsx";
 function TypingChallenge({
   selectedParagraph,
   timeStarted,
   timeremaining,
   testInfo,
 }) {
-  console.log("type challenge :", testInfo);
+  // console.log(testInfo);
 
   return (
     <div className="typing-challenge">
@@ -20,7 +21,13 @@ function TypingChallenge({
       </div>
       <div className="textarea-cont">
         <div className="textarea-left">
-          <div className="textarea test-paragraph">{selectedParagraph}</div>
+          <div className="textarea test-paragraph">
+            {testInfo.map((individualLetter, index) => {
+              return (
+                <TestLetter individualLetter={individualLetter} key={index} />
+              );
+            })}
+          </div>
         </div>
         <div className="textarea-right">
           <textarea

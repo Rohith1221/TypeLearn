@@ -12,6 +12,8 @@ function TestContainer({
   timeremaining,
   testInfo,
 }) {
+  // console.log("TC", timeremaining);
+
   return (
     <div className="TC-container">
       {timeremaining > 0 ? (
