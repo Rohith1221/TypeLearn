@@ -98,6 +98,21 @@ class App extends React.Component {
     this.setState({ testInfo });
   }
 
+  StartTimer = () => {
+    this.setState({ timerStarted: true });
+    const timer = setInterval(() => {
+      if (this.state.timeRemaining > 0)
+        this.setState({ timeRemaining: this.state.timeRemaining - 1 });
+      else {
+        clearInterval(timer);
+      }
+    }, 1000);
+  };
+  HandleUserInput = (inputValue) => {
+    console.log(inputValue);
+    if (!this.state.timerStarted) this.StartTimer();
+  };
+
   render() {
     console.log(this.state.testInfo);
     return (
@@ -112,6 +127,7 @@ class App extends React.Component {
           wpm={this.state.wpm}
           timeremaining={this.state.timeRemaining}
           timerStarted={this.state.timerStarted}
+          onInputChange={this.HandleUserInput}
         />
         <Footer />
       </div>

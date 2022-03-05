@@ -9,6 +9,7 @@ function ChallengeSection({
   timeremaining,
   timeStarted,
   testInfo,
+  onInputChange,
 }) {
   // console.log(props.selectedParagraph);
   return (
@@ -24,6 +25,7 @@ function ChallengeSection({
         timeStarted={timeStarted}
         timeremaining={timeremaining}
         testInfo={testInfo}
+        onInputChange={onInputChange}
       />
     </div>
   );

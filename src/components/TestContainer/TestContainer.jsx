@@ -11,6 +11,7 @@ function TestContainer({
   timeStarted,
   timeremaining,
   testInfo,
+  onInputChange,
 }) {
   // console.log("TC", timeremaining);
 
@@ -26,6 +27,7 @@ function TestContainer({
             timeremaining={timeremaining}
             selectedParagraph={selectedParagraph}
             testInfo={testInfo}
+            onInputChange={onInputChange}
           />
         </div>
       ) : (

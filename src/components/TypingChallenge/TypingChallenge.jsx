@@ -6,6 +6,7 @@ function TypingChallenge({
   timeStarted,
   timeremaining,
   testInfo,
+  onInputChange,
 }) {
   // console.log(testInfo);
 
@@ -31,6 +32,9 @@ function TypingChallenge({
         </div>
         <div className="textarea-right">
           <textarea
+            onChange={(e) => {
+              onInputChange(e.target.value);
+            }}
             className="textarea"
             placeholder="start typing here"
           ></textarea>
