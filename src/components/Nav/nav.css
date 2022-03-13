@@ -37,3 +37,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.github {
+  color: rgb(156, 156, 156);
+  transition: 0.3s;
+}
+.github:hover {
+  color: rgb(255, 73, 73);
+}

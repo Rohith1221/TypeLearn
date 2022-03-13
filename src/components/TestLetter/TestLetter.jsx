@@ -6,7 +6,7 @@ function TestLetter({ individualLetter }) {
   // let statusClass;
 
   const statusClass = {
-    coreect: "test-letter-correct",
+    correct: "test-letter-correct",
     incorrect: "test-letter-incorrect",
     notAttempted: "test-letter-not-attempted",
   }[status];

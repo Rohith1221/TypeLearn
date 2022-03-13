@@ -8,7 +8,7 @@ function TypingChallenge({
   testInfo,
   onInputChange,
 }) {
-  // console.log(testInfo);
+  console.log("TCC", testInfo);
 
   return (
     <div className="typing-challenge">

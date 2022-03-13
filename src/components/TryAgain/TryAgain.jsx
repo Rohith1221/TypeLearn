@@ -1,6 +1,6 @@
 import React from "react";
 import "./TA.css";
-function TryAgain({ words, characters, wpm }) {
+function TryAgain({ words, characters, wpm, startAgain }) {
   return (
     <div className="try-again-cont">
       <h1>Test results</h1>
@@ -16,7 +16,12 @@ function TryAgain({ words, characters, wpm }) {
         </p>
       </div>
       <div className="">
-        <button className="end-buttons start-again-btn">Re-Try</button>
+        <button
+          className="end-buttons start-again-btn"
+          onClick={() => startAgain()}
+        >
+          Re-Try
+        </button>
         <button
           className="end-buttons share-btn"
           onClick={() => {
